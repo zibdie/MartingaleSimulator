@@ -12,3 +12,11 @@ If you prefer to run the code through Docker, building and running the container
 > docker build -t martingale_simulator .
 > docker run -p 8888:8888 martingale_simulator
 ```
+
+### DockerHub
+
+If you wish to have the latest version, you can just pull it from DockerHub
+
+```
+docker run -p 8888:8888 zibdie/martingale_simulator:latest
+```
