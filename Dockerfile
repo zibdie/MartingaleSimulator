@@ -1,4 +1,4 @@
-FROM python:3.9-slim
+FROM python:3.12-slim
 
 # Add user 'jupyter' so we dont need to run as root
 RUN useradd -m jupyter
@@ -6,7 +6,7 @@ RUN useradd -m jupyter
 WORKDIR /usr/src/app
 COPY martingale_simulator.ipynb ./
 
-RUN pip install jupyterlab==4.2.0 numpy==1.26.4 pandas==2.2.2 matplotlib==3.8.4
+RUN pip install jupyterlab matplotlib pandas
 
 RUN chown -R jupyter:jupyter /usr/src/app
 
